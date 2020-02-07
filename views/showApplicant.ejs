@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <link type = "text/css" rel = "stylesheet" href = "stylesheetAppPage2.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <div id= "header">
+    <img src = "logoimage.jpg" alt="">
+    <h6> Heaven's Light Is Our Guide </h6>
+    <h1> Rajshahi University Of Engineering & Technology </h1>
+    <h3> রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয় </h3>
+</div>
+<div id= "navbar">
+<ul> 
+    <li> <a href = ""> Home </a> </li>
+    <li> <a href = ""> Manage Jobs </a> </li>
+    <li> <a href = ""> Board Authority </a> </li>
+    <li> <a href = ""> Career Learning </a> </li>
+</ul>
+</div>
+<div class="page-wrapper" style="margin-right: 20px; margin-left: 20px; border-style: solid; ">
+    <h6 style="color: darkgreen; text-align: center; font-size: 150%;"> Heaven's Light Is Our Guide </h6>
+    <h3 style="color: darkgreen; text-align: center; font-size: 150%;"> Rajshahi University Of Engineering & Technology </h3>
+    <h3 style="color: darkgreen; text-align: center; font-size: 150%;"> রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয় </h3>
+    <h1 style="color: darkgreen; text-align: center; font-size: 150%;">Application Form</h1>
+    <div class="table-wrapper">
+        <% if (players.length > 0) {%>
+            <table class="table table-striped">
+                <tbody>
+                    <% players.forEach((player, index) => { %>
+                        <tr>
+                            <td>
+                            <label for="app" class="label">"Applicant No: "
+                                <strong><%= player.user_id %></strong></label> 
+                            </td>
+                            <td>
+                            <label for="app" class="label">"Applied For: "
+                                <strong><%= player.title %></strong></label> 
+                            </td>
+                            <td>
+                            <label for="app" class="label">"Applied Section: "
+                                <strong><%= player.section %></strong></label> 
+                            </td>
+                        </tr>
+                         <% }) %>
+                    </tbody>
+                </table>
+                <% } %>
+                <br>
+                <br>
+                <h1 style="color: darkgreen; text-align: center; font-size: 150%">Personal Information</h1>
+                <% if (personals.length > 0) {%>
+                <table class="table table-striped">
+                    <tbody>
+                       <% personals.forEach((personal, index) => { %>
+                        <tr>
+                            <td>
+                                <label for="app" class="label">"Applicant's Name: "
+                                <strong><%= personal.name %></strong></label> 
+                            </td>
+                            <td>
+                                <label for="app" class="label">"Father's Name: "
+                                <strong><%= personal.father_name %></strong></label> 
+                            </td>
+                            <td>
+                                <label for="app" class="label">"Mother's Name: "
+                                <strong><%= personal.mother_name %></strong></label> 
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="app" class="label">"Date Of Birth: "
+                                <strong><%= personal.birth_date %></strong></label> 
+                            </td>
+                            <td>
+                                <label for="app" class="label">"Gender: "
+                                <strong><%= personal.gender %></strong></label> 
+                            </td>
+                            <td>
+                                <label for="app" class="label">"Nationality: "
+                                <strong><%= personal.nationality %></strong></label> 
+                            </td>
+                            <td>
+                                <label for="app" class="label">"Religion: "
+                                <strong><%= personal.religion %></strong></label> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="app" class="label">"E-mail: "
+                                <strong><%= personal.email %></strong></label> 
+                            </td>
+                            <td>
+                                <label for="app" class="label">"Contact: "
+                                <strong><%= personal.contact %></strong></label> 
+                            </td>
+                            <td>
+                                <label for="app" class="label">"Blood-Group: "
+                                <strong><%= personal.blood_group %></strong></label> 
+                            </td>
+                            <td>
+                                <label for="app" class="label">"Tribal: "
+                                <strong><%= personal.tribal %></strong></label> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="app" class="label">"Marrital Status: "
+                                <strong><%= personal.marrital_status %></strong></label> 
+                            </td>
+                            <td>
+                                <label for="app" class="label">"National ID: "
+                                <strong><%= personal.national_id %></strong></label> 
+                            </td>
+                            <td>
+                                <label for="app" class="label">"District: "
+                                <strong><%= personal.district %></strong></label> 
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"> <label for="app" class="label">"Present Address: " 
+                                <strong><%= personal.present_address %></strong></label>   
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"> <label for="app" class="label">"Permanent Address: " 
+                                <strong><%= personal.permanent_address %></strong></label>   
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+                <% } %>
+                <br>
+                <br>
+                <h1 style="color: darkgreen; text-align: center; font-size: 150%">Educational Background</h1>
+                <h5 style="color: green; text-align: center; font-size: 100%">SSC Infomation</h5>
+                <% if (sscs.length > 0) {%>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr class="bg-dark" style="color:#fff;">
+                        <th>Roll No</th> <th>Registration No</th> <th>Result</th> <th>Board</th>
+                        <th>Group</th><th>Year</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <% sscs.forEach((ssc, index) => { %>
+                        <tr>
+                        <td><%= ssc.roll_no %></td>
+                        <td><%= ssc.reg_no %></td>
+                        <td><%= ssc.result %></td>
+                        <td><%= ssc.board %></td>
+                        <td><%= ssc.group %></td>
+                        <td><%= ssc.year %></td>
+                        <% }) %>
+                         </tr>
+                    </tbody>
+                </table>
+                <% } %>
+                <br>
+                <h5 style="color: green; text-align: center; font-size: 100%">HSC Infomation</h5>
+                <% if (hscs.length > 0) {%>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr class="bg-dark" style="color:#fff;">
+                        <th>Roll No</th> <th>Registration No</th> <th>Result</th> <th>Board</th>
+                        <th>Group</th><th>Year</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <% hscs.forEach((hsc, index) => { %>
+                        <tr>
+                        <td><%= hsc.roll_no %></td>
+                        <td><%= hsc.reg_no %></td>
+                        <td><%= hsc.result %></td>
+                        <td><%= hsc.board %></td>
+                        <td><%= hsc.group %></td>
+                        <td><%= hsc.year %></td>
+                         <% }) %>
+                         </tr>
+                    </tbody>
+                </table>
+                <% } %>
+                <br>
+                <h5 style="color: green; text-align: center; font-size: 100%">Graduate Infomation</h5>
+                <% if (graduates.length > 0) {%>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr class="bg-dark" style="color:#fff;">
+                        <th>Subject</th> <th>Result/Credit</th> <th>Passing Year</th> <th>Field Of Specialization</th> <th>University/Institution</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <% graduates.forEach((graduate, index) => { %>
+                        <tr>
+                        <td><%= graduate.subject %></td>
+                        <td><%= graduate.result %></td>
+                        <td><%= graduate.year %></td>
+                        <td><%= graduate.special_field %></td>
+                        <td><%= graduate.institution %></td>
+                        <% }) %>
+                         </tr>
+                    </tbody>
+                </table>
+                <% } %>
+                <br>
+                <h5 style="color: green; text-align: center; font-size: 100%">Post Graduate Infomation</h5>
+                <% if (postgraduates.length > 0) {%>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr class="bg-dark" style="color:#fff;">
+                        <th>Subject</th> <th>Result/Credit</th> <th>Passing Year</th> <th>Field Of Specialization</th> <th>University/Institution</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <% postgraduates.forEach((postgraduate, index) => { %>
+                        <tr>
+                        <td><%= postgraduate.subject %></td>
+                        <td><%= postgraduate.result %></td>
+                        <td><%= postgraduate.year %></td>
+                        <td><%= postgraduate.special_field %></td>
+                        <td><%= postgraduate.institution %></td>
+                         <% }) %>
+                         </tr>
+                    </tbody>
+                </table>
+                <% } %>
+                <br>
+                <h5 style="color: green; text-align: center; font-size: 100%">PhD Infomation</h5>
+                <% if (phds.length > 0) {%>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr class="bg-dark" style="color:#fff;">
+                        <th>Subject</th> <th>Research Field</th> <th>University/Institution</th> <th>Research Paper</th> <th>Superviser/Demonstrator</th> <th>Publication(Journal)</th> <th>Publication Year</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <% phds.forEach((phd, index) => { %>
+                        <tr>
+                        <td><%= phd.subject %></td>
+                        <td><%= phd.research_field %></td>
+                        <td><%= phd.institution %></td>
+                        <td><%= phd.research_paper %></td>
+                        <td><%= phd.supervisor %></td>
+                        <td><%= phd.journal %></td>
+                        <td><%= phd.pub_year %></td>
+                        <% }) %>
+                         </tr>
+                    </tbody>
+                </table>
+                <% } %>
+                <br>
+                <h5 style="color: green; text-align: center; font-size: 100%">Helpful Infomation</h5>
+                <% if (helps.length > 0) {%>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr class="bg-dark" style="color:#fff;">
+                        <th>Field Name</th> <th>Degree</th> <th>Recognition</th> <th>Institution</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <% helps.forEach((help, index) => { %>
+                        <tr>
+                        <td><%= help.field_name %></td>
+                        <td><%= help.degree %></td>
+                        <td><%= help.recognition %></td>
+                        <td><%= help.institution %></td>
+                         <% }) %>
+                         </tr>
+                    </tbody>
+                </table>
+                <% } %>
+                <br>
+                <br>
+                <h1 style="color: darkgreen; text-align: center; font-size: 150%">Secondary Information</h1>
+                <% if (seconds.length > 0) {%>
+                <table class="table table-striped">
+                <tbody>
+                    <% seconds.forEach((second, index) => { %>
+                        <tr>
+                            <td>
+                            <label for="app" class="label">"Skill: "
+                                <strong><%= second.skill %></strong></label> 
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <label for="app" class="label">"Litigation: "
+                                <strong><%= second.litigation %></strong></label> 
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                         <% }) %>
+                    </tbody>
+                </table>
+                <% } %>
+                <br>
+                <br>
+                <h1 style="color: darkgreen; text-align: center; font-size: 150%">Bank/Pay Information</h1>
+                <% if (banks.length > 0) {%>
+                <table class="table table-striped">
+                    <tbody>
+                        <% banks.forEach((bank, index) => { %>
+                        <tr>
+                            <td>
+                                <label for="app" class="label">"Bank Draft No: "
+                                <strong><%= bank.bank_draft_no %></strong></label> 
+                            </td>
+                            <td>
+                                <label for="app" class="label">"Bank Name: "
+                                <strong><%= bank.bank_name %></strong></label> 
+                            </td>
+                            <td>
+                                <label for="app" class="label">"Issue Date: "
+                                <strong><%= bank.issue_date %></strong></label> 
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+                <% } %>
+    </div>
+</div>
+
+<br>
+<br>
+<div class="col text-center">
+   <button class="btn btn-primary" class="form-control" onclick="getPDF()">Download your PDF copy</button>
+</div>
+
+<script type="text/javascript">
+    function getPDF(){
+ 
+ var HTML_Width = $(".page-wrapper").width();
+ var HTML_Height = $(".page-wrapper").height();
+ var top_left_margin = 10;
+ var PDF_Width = HTML_Width+(top_left_margin*2);
+ var PDF_Height = (PDF_Width*1.5)+(top_left_margin*2);
+ var canvas_image_width = HTML_Width;
+ var canvas_image_height = HTML_Height;
+ 
+ var totalPDFPages = Math.ceil(HTML_Height/PDF_Height)-1;
+ 
+ 
+ html2canvas($(".page-wrapper")[0],{allowTaint:true}).then(function(canvas) {
+ canvas.getContext('2d');
+ 
+ console.log(canvas.height+"  "+canvas.width);
+ 
+ 
+var imgData = canvas.toDataURL("image/jpeg", 1.0);
+ var pdf = new jsPDF('p', 'pt',  [PDF_Width, PDF_Height]);
+     pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin,canvas_image_width,canvas_image_height);
+ 
+ 
+ for (var i = 1; i <= totalPDFPages; i++) { 
+ pdf.addPage(PDF_Width, PDF_Height);
+ pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height*i)+(top_left_margin*4),canvas_image_width,canvas_image_height);
+ }
+ 
+     pdf.save("Application-Document.pdf");
+        });
+ };
+
+</script>
+
+<div id="footer">
+    Copyrights RUET 2019. All rights reserved </br>
+    Application developed by:Web Designer,RUET
+</div>
+</body>
+</html>

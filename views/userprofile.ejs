@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title><%= title %></title>
+<link type = "text/css" rel = "stylesheet" href = "stylesheetuser.css">
+<link type = "text/css" rel = "stylesheet" href = "stylesheetusermodalpage.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+</head>
+
+<body class="bg-light">
+<div id= "header">
+	<img src = "logoimage.jpg" alt="">
+	<h6> Heaven's Light Is Our Guide </h6>
+	<h1> Rajshahi University Of Engineering & Technology </h1>
+	<h3> রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয় </h3>
+</div>
+<div>
+	<div class="toggle">
+		<i class="fa fa-bars" class="menu"></i>
+	</div>
+<nav  id= "navbar">
+<ul> 
+	<li><a href = "#" onclick=" "> Home </a> </li>
+	<li> <a href = "" disabled="disabled"> Manage Jobs </a> </li>
+	<li> <a href = "" class="disabled"> Board Authority </a> </li>
+	<li> <a href = ""> Career Learning </a> </li>
+	<li class="dropdown"> <a href="/logout" type="button" style="padding: 5px 10px;background-color:#2c8F77; 
+	color: white; ">Log-out</a>
+</li>
+</ul>
+</nav>
+</div>
+
+	
+	<div id="welcome">
+ <h1> Welcome!!... </h1>
+
+</div>
+
+
+ 	
+<div class="searchbar">
+	<h1> Search Jobs Here...</h1>
+	<form>
+		<input type="text" name="" 
+		placeholder="Search by title or department...">
+		<input type="submit" name="" value="Search">
+
+	</form>
+</div>
+
+<div class="jobsection">
+	<% if (players.length > 0) {%>
+	<% players.forEach((player, index) => { %>
+	<div>
+		<h4><%= player.job_no %>.Circular for the post <%= player.job_name %></h4>
+		<p class="lead">On the basis of revenue account of Rajshahi University of Engineering & Technology(RUET) destined by government, applications are being lobbied from the interested applicants for the issued post of <%= player.job_name %> in stated departments... </p>
+		<form action="/apply" method="post">
+		<button class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" type="button">Learn More</button>
+		<button class="btn btn-success" name="apply" type="submit">Apply Now</button>
+		</form>
+		<br>
+		<br>
+	</div>
+
+	<div class="collapse" id="collapseExample">
+		<div class="card card-body">
+    	<h5><bold>Required Post:</bold><%= player.job_name %></h5>
+    	<h5><bold>Vacancy in Stated Departments:</bold> <%= player.dept %></h5>
+    	<p> 
+    	Responsibilities: <%= player.responsibility %>
+    	</p>
+    	<p>
+    	Requirements: <%= player.requirement %>
+		</p>
+		<h5><bold>Salary:</bold> <%= player.salary %></h5>
+		<h5><bold>Deadline:</bold><%= player.deadline %> </h5>
+		</div>
+    </div>
+	 <% }) %>
+	 <% } %>
+</div>
+
+	<div>
+	<button class="btn btn-warning float-right" type="button" id="prev_footer" onclick="document.getElementById('id03').style.display='block'">Inform us</button>
+	</div>
+
+
+
+<!--<div id="detail1">
+	
+<div id="id01" class="modal">
+	<% if (players.length > 0) {%>
+	<% players.forEach((player, index) => { %>
+  	<form class="modal-content animate" action="/apply" method="post">
+    	<div class="imgcontainer">
+     	 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+    	</div>
+
+    	
+		
+    	<div class="container2">
+    		<button name="apply" class="btn btn-success" class="form-control float-right" type="submit" class="applybtn">Apply Now</button>
+      		<button class="btn btn-danger" class="form-control float-right" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    	</div>
+    	<div class="clearfix"></div>
+  	</form>
+  	<% }) %>
+	 <% } %>
+	</div>
+	
+</div>-->
+
+<!-- <div id="detail2">
+<div id="id02" class="modal">
+  	<form class="modal-content animate" action="/apply" method="post">
+    	<div class="imgcontainer">
+     	 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close">&times;</span>
+     	     	</div>
+
+    	<div class="infocorner">
+    	<h5><bold>Required Post:</bold> Software/Database Programmer/Instructor</h5>
+    	<h5><bold>Vacancy for the post:</bold> Administrative:(02), Central Computer Center:(03) </h5>
+
+    	<p> 
+    	1. The candidates must possess B.Sc. Engineering/Honours(4 yrs) in Computer Science/Information Technlogy/Software/Electronics & Communication/ Telecommunication/Ekectrical & Electronics/ Applied Physics & electronics/ Applied Statistics
+    	</p>
+    	<p>or</p>
+    	<p>
+    	 M.Sc. with 3 yrs Honours in Computer Science/Information Technlogy/Software/Electronics & Communication/ Telecommunication/Ekectrical & Electronics/ Applied Physics & electronics/ Applied Statistics
+
+    	</p>
+
+    	<p>
+    	 2. Should have at least second class/division in all examination
+    	</p>
+
+    	<p>
+    	 3. Candidates having experiences in MySQL/PHP and working in LINUX/WINDOWS NT environment will be given preference.
+    	</p>
+
+    	<h5><bold>Salary:</bold> 22,500-35,000/-(basic)</h5>
+		<h5><bold>Deadline:</bold>30-September-2019 </h5>
+
+    	</div>
+		
+    	<div class="container2">
+    		<button name="apply" class="btn btn-success" class="form-control float-right" type="submit" class="applybtn">Apply Now</button>
+      		<button class="btn btn-danger" class="form-control float-right" type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+    	</div>
+    	<div class="clearfix"></div>
+  	</form>
+	</div>
+</div> -->
+
+								<!-- Email part-->
+
+<div class="info1">
+<div id="id03" class="modal">
+	{{msgs}}
+  	<form class="modal-content animate" action="/mail" method="post">
+    	<div class="imgcontainer">
+     	 <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close">&times;</span>
+     	 <!--<img src="logoimage.jpg" alt="Avatar" class="avatar">-->
+    	</div>
+
+    	<div class="container2">
+    		<div class="form-row">
+	    		<div class="col-md-6 mb-2">
+	     		 <label for="email"><b>E-mail</b></label>
+	      		<input type="email"class="form-control" placeholder="Enter Your E-mail" name="email" required>
+	      		</div>
+	      		<div class="col-md-6 mb-2">
+	     		<label for="psw"><b>Password</b></label>
+	      		<input type="password"class="form-control" placeholder="Enter Your Password" name="psw" required>
+	      		</div>
+      		</div>
+      		<div class="form-group">
+      		<label for="subject"><b>Text</b></label>
+      		<textarea class="form-control" class="form" rows="8" name="subject" required></textarea>
+        	</div>
+        	
+			<button class="btn btn-success" class="form-control float-left" type="submit" name="mail" onclick="document.getElementById('id03').style.display='none'">Send</button>
+     		 
+			<button class="btn btn-danger" class="form-control float-right" type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+			</div>
+  	</form>
+	</div>
+</div>
+	<script>
+	// Get the modal
+	var modal = document.getElementById('id03');
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+   		 if (event.target == modal) {
+       	 modal.style.display = "none";
+   		 }
+		}
+	</script>
+
+
+<div id="footer">
+	Copyrights RUET 2019. All rights reserved </br>
+	Application developed by:Web Designer,RUET
+</div>
+
+								
+<!-- Excess-->
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.menu').click(function(){
+			$('.navbar').toggleClass('active')
+		})
+
+	})
+
+</script>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
