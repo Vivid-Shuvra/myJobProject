@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title> RUET: Job Portal/Admin/Manage Job </title>
+<link type = "text/css" rel = "stylesheet" href = "stylesheetpostjob.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+<div id= "header">
+	<img src = "logoimage.jpg" alt="">
+	<h6> Heaven's Light Is Our Guide </h6>
+	<h1> Rajshahi University Of Engineering & Technology </h1>
+	<h3> রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয় </h3>
+</div>
+<div id= "navbar">
+<ul> 
+	<li> <a href = ""> Home </a> </li>
+	<li> <a href = ""> Manage Jobs </a> </li>
+	<li> <a href = ""> Board Authority </a> </li>
+	<li> <a href = ""> Career Learning </a> </li>
+</ul>
+</div>
+	
+<div class="container">
+	<h1 class="text-success"> Post the jobs here... </h1>
+<form method="post" action="/savejob">
+	<div class="form-group">
+		<label for="job">Job No.:</label>
+		<input class="form-control" type="text" name="job">
+	</div>
+	<div class="form-group">
+		<label for="name">Job Name:</label>
+		<input class="form-control" type="text" name="name">
+	</div>
+
+	<div class="form-group">
+		<label for="dept">Vacancy(In Details):</label>
+		<textarea class="form-control" class="form" name="dept" rows="3"></textarea>
+	</div>
+
+	<div class="form-group">
+		<label for="detail">Responsibilities:</label>
+		<textarea class="form-control" class="form" name="detail" rows="8"></textarea>
+	</div>
+
+	<div class="form-group">
+		<label for="status">Requirements:</label>
+		<textarea class="form-control" class="form" name="status" rows="5"></textarea>
+	</div>
+
+	<div class="form-group">
+		<label for="salary">Salary:</label>
+		<input class="form-control" type="text" name="salary">
+	</div>
+	<div class="form-group">
+		<label for="deadline">Deadline:</label>
+		<input class="form-control" type="date" name="deadline">
+	</div>
+
+	<button class="btn btn-success mt-5" type="submit" name="savejob">Post</button>
+
+</form>
+
+</div>
+ 
+<div id="footer">
+	Copyrights RUET 2019. All rights reserved </br>
+	Application developed by:Web Designer,RUET
+</div>
+	
+
+</body>
+
+</html>
