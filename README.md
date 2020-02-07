@@ -1,1 +1,1 @@
-Its an online job application project where anyone can apply to his / her respective job fields dynamically
+Its an online job application project where anyone can apply to his / her respective job fields dynamically through a step by step process . Also the owner of the site can manage and maintain the applicant for the applied job requests.  
