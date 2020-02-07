@@ -1,0 +1,648 @@
+<!doctype html>
+
+<html>
+
+<head>
+<title> RUET: Job Portal/User/Application</title>
+<link type = "text/css" rel = "stylesheet" href = "stylesheetAppPage3.css">
+<link type = "text/css" rel = "stylesheet" href = "stylesheetapplicationModal.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body class="bg-light">
+<div id= "header">
+	<img src = "logoimage.jpg" alt="">
+	<h6> Heaven's Light Is Our Guide </h6>
+	<h1> Rajshahi University Of Engineering & Technology </h1>
+	<h3> রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয় </h3>
+</div>
+<div id= "navbar">
+<ul> 
+	<li> <a href = ""> Home </a> </li>
+	<li> <a href = ""> Manage Jobs </a> </li>
+	<li> <a href = ""> Board Authority </a> </li>
+	<li> <a href = ""> Career Learning </a> </li>
+</ul>
+</div>
+
+<div id="header_form"><h1 align="center">Application Form</h1></div>
+<br>
+<br>
+<div class="container">
+<h3 class="info_header bg-success" align="center">Educational Qualification</h3>
+	<br>
+
+	<div class="row">
+		<div class="col-md-6 mb-2">
+	 	 <label for="qualification" style="color: green; font-style:italic;"> Add Your Qualifications Here...</label>
+	 	 <nav class="main_nav" class="form-control">
+	 	 	<ul>
+	 	 		<li class="has_sub"> <a href="javascript:void(0)"><i class="fa fa-pencil" ></i>Primary Qualification<span class="sub-arrow"></span></a>
+	 	 			<ul>
+	 	 				<li><a href="javascript:void(0)" onclick="document.getElementById('id04').style.display='block'">Minimum Requirement</a></li>
+	 	 				<li><a href="javascript:void(0)" onclick="document.getElementById('id01').style.display='block'">Add Qualification</a></li>
+	 	 			</ul>
+	 	 		</li>
+	 	 		<li class="has_sub"><a href="javascript:void(0)"><i class="fa fa-desktop"></i>Higher Studies<span class="sub-arrow"></span></a>
+	 	 			<ul>
+	 	 				<li><a href="javascript:void(0)" onclick="document.getElementById('id05').style.display='block'">Add Higher studies</a></li>
+	 	 			</ul>
+	 	 		</li>
+
+	 	 		<li><a href="javascript:void(0)" onclick="document.getElementById('id09').style.display='block'"><i class="fa fa-align-justify"></i>Additional Qualification</a></li>
+	 	 	</ul>
+
+	 	 </nav>
+	    </div>
+	</div>
+<br>
+<br>
+	<div class="pagination">
+      <center>
+      	<a href="/personal" class="prev">&laquo; Previous</a>
+      	<a href="/secondary" class="nxt">Next &raquo;</a>
+      </center>
+  	</div>
+
+	<div id="footer">
+		Copyrights RUET 2019. All rights reserved </br>
+		Application developed by:Web Designer,RUET
+	</div>
+</div>
+
+											<!-- Modal for SSC-->
+
+<div id="id01" class="modal" >
+  	<form class="modal-content animate" action="/ssc" method="post">
+    	<div class="imgcontainer">
+     	 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+     	 <!--<img src="logoimage.jpg" alt="Avatar" class="avatar">-->
+    	</div>
+
+    	<div class="container2">
+    		<h5 align="center">SSC/Equivalent Exam Information</h5>
+    		<h6 style="color: red; font-style: italic;">*Please Fill out the fields and save your information. After that you can proceed to next segment!</h6>
+     	  <div class="form-row">
+		    <div class="col-md-4 mb-3">
+		      <label for="roll">Roll No</label>
+		      <input type="text" class="form-control" name="roll" placeholder="93****1" required>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="reg">Registration No</label>
+		      <input type="text" class="form-control" name="reg" placeholder="123*********89" required>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="result">Result</label>
+		      <input type="text" class="form-control" name="result" placeholder="Result" required>
+		    </div>
+		  </div>
+      		
+
+		   <div class="form-row">
+		    <div class="col-md-4 mb-3">
+		      <label for="board">Education Board:</label>
+		      <select class="form-control" name="board" required> <option>Select One</option>
+					<option>Dhaka</option>
+					<option>Rajshahi</option>
+					<option>Chattogram</option>
+					<option>Khulna</option>
+					<option>Barishal</option>
+					<option>Cumilla</option>
+					<option>Rangpur</option>
+					<option>Dinajpore</option>
+					<option>Sylhet</option>
+					<option>Jashore</option>
+					<option>Madrasah</option>
+					<option>Technical</option>
+				</select>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="group">Group:</label>
+		      <select class="form-control" name="group" required> <option>Select One</option>
+					<option>Science</option>
+					<option>Arts</option>
+					<option>Commerce</option>
+					<option>General</option>
+				</select> 
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="year">Passing Year:</label>
+		      <select class="form-control" name="year" required> <option>Select One</option>
+					<option>2005</option>
+					<option>2006</option>
+					<option>2007</option>
+					<option>2008</option>
+					<option>2009</option>
+					<option>2010</option>
+					<option>2011</option>
+					<option>2012</option>
+					<option>2013</option>
+					<option>2014</option>
+					<option>2015</option>
+					<option>2016</option>
+					<option>2017</option>
+					<option>2018</option>
+					<option>2019</option>
+				</select> 
+		    </div>
+		  </div>
+
+      		
+      			<button class="btn btn-success" class="form-control float-left" type="submit" name="ssc" onclick="document.getElementById('id02').style.display='block', document.getElementById('id01').style.display='none'">Save</button> 
+      		
+    
+    	</div>
+
+    	<div class="container2">
+      		<button class="btn btn-danger" class="form-control float-right" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    	</div>
+    	<div class="clearfix"></div>
+  	</form>
+	</div>
+
+										<!-- Modal for HSC-->
+
+
+<div id="id02" class="modal">
+  	<form class="modal-content animate" action="/hsc" method="post">
+    	<div class="imgcontainer">
+     	 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close">&times;</span>
+     	 <!--<img src="logoimage.jpg" alt="Avatar" class="avatar">-->
+    	</div>
+
+    	<div class="container2">
+    		<h5 align="center">HSC/Equivalent Exam Information</h5>
+    		<h6 style="color: red; font-style: italic;">*Please Fill out the field and save your information!</h6>
+     	  <div class="form-row">
+		    <div class="col-md-4 mb-3">
+		      <label for="roll_2">Roll No</label>
+		      <input type="text" class="form-control" name="roll_2" placeholder="93****1" required>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="reg_2">Registration No</label>
+		      <input type="text" class="form-control" name="reg_2" placeholder="123*********89"required>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="result_2">Result</label>
+		      <input type="text" class="form-control" name="result_2" placeholder="Result" required>
+		    </div>
+		  </div>
+      		
+
+		   <div class="form-row">
+		    <div class="col-md-4 mb-3">
+		      <label for="board_2">Education Board:</label>
+		      <select class="form-control" name="board_2" required> <option>Select One</option>
+					<option>Dhaka</option>
+					<option>Rajshahi</option>
+					<option>Chattogram</option>
+					<option>Khulna</option>
+					<option>Barishal</option>
+					<option>Cumilla</option>
+					<option>Rangpur</option>
+					<option>Dinajpore</option>
+					<option>Sylhet</option>
+					<option>Jashore</option>
+					<option>Madrasah</option>
+					<option>Technical</option>
+				</select>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="group_2">Group:</label>
+		      <select class="form-control" name="group_2" required> <option>Select One</option>
+					<option>Science</option>
+					<option>Arts</option>
+					<option>Commerce</option>
+				</select> 
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="year_2">Passing Year:</label>
+		      <select class="form-control" name="year_2" required> <option>Select One</option>
+					<option>2005</option>
+					<option>2006</option>
+					<option>2007</option>
+					<option>2008</option>
+					<option>2009</option>
+					<option>2010</option>
+					<option>2011</option>
+					<option>2012</option>
+					<option>2013</option>
+					<option>2014</option>
+					<option>2015</option>
+					<option>2016</option>
+					<option>2017</option>
+					<option>2018</option>
+					<option>2019</option>
+				</select> 
+		    </div>
+		  </div>
+
+      		 <button class="btn btn-success" class="form-control float-left" type="submit" name="hsc" onclick="document.getElementById('id02').style.display='none'">Save</button>    
+    	</div>
+
+    	<div class="container2">
+      		<button class="btn btn-danger" class="form-control float-right" type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+    	</div>
+    	<div class="clearfix"></div>
+  	</form>
+	</div>
+
+
+									<!-- Modal for primaryOthers-->
+
+
+<div id="id04" class="modal">
+  	<form class="modal-content animate" action="/primary " method="post" enctype="multipart/form-data">
+    	<div class="imgcontainer">
+     	 <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close">&times;</span>
+     	 <!--<img src="logoimage.jpg" alt="Avatar" class="avatar">-->
+    	</div>
+
+    	<div class="container2">
+    		<h5 align="center">Primary Educaion Information</h5>
+    		<h6 style="color: red; font-style: italic;">*Please Fill out if you are under SSC level otherwise simply omit this section!</h6>
+    		<div class="form-check">
+				<label class="form-check-label">
+				<input class="form-check-input" type="checkbox" id="chk_one"> I have a minimum education 
+				</label>
+				<br>
+				<label class="form-check-label">
+				<input class="form-check-input" type="checkbox" id ="chk_two"> I have no education  
+				</label>
+			</div>
+
+    	  <div id="one">
+     	   <div  class="form-row" >
+		     <div class="col-md-3 mb-3">
+		      <label for="standard">To which class/standard you have read?</label>
+		      <input type="text" class="form-control" name="standard">
+		    </div>
+		    <div class="col-md-3 mb-3">
+		      <label for="result4">Result</label>
+		      <input type="text" class="form-control" name="result4" placeholder="Result">
+		    </div>
+		    <div class="col-md-6 mb-3">
+		      <label for="institute">Institution Name</label>
+		      <input type="text" class="form-control" name="institute" >
+		  </div>
+		  </div>
+		  </div>
+
+		  <div id="two" hidden="hidden">
+		  	<div class="form-group">
+		  	<label for="description">Add some description(if any)</label>
+      		<textarea class="form-control" class="form" name="description" rows="4"></textarea>
+      		</div>
+			</div>
+
+			<div id="three">
+			<div class="form-group"> 
+				<label for="certification_1">Add certifications(if any)</label>
+				<input type="file" name="certification" id="realFile4" hidden="hidden">
+				<button class="btn btn-secondary mt-2" class="form-control" type="button" id="custom-button4">Choose    File</button>
+				<span id="custom-text4">No file chosen yet</span>
+				<script type="text/javascript">
+					const realFileBtn4 = document.getElementById("realFile4");
+					const customBtn4 = document.getElementById("custom-button4");
+					const customTxt4 = document.getElementById("custom-text4");
+
+					customBtn4.addEventListener("click", function() {
+
+						realFileBtn4.click();
+					});
+
+					realFileBtn4.addEventListener("change", function() {
+
+						if(realFileBtn4.value){
+							customTxt4.innerHTML = realFileBtn4.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+						}
+						else{
+							customTxt4.innerHTML = "No file chosen yet";
+						}
+					});
+				</script>
+
+			  </div>
+			</div>
+		  	
+		  <script type="text/javascript">
+			$(function(){
+				var section_one = $('#one');
+				section_one.attr('hidden', 'hidden');
+			$('#chk_one').change(function(e){
+					if(this.checked){
+						section_one.removeAttr('hidden');
+					}else{
+						section_one.attr('hidden', 'hidden');
+					}
+				});
+
+			});
+
+			$(function(){
+				var section_two = $('#two');
+				section_two.attr('hidden', 'hidden');
+			$('#chk_two').change(function(e){
+					if(this.checked){
+						section_two.removeAttr('hidden');
+					}else{
+						section_two.attr('hidden', 'hidden');
+					}
+				});
+
+			});
+		</script>
+ 
+      	<button class="btn btn-success" class="form-control float-left" type="submit" name="primary" onclick="document.getElementById('id04').style.display='none'">Submit</button>
+    
+    	</div>
+
+    	<div class="container2">
+      		<button class="btn btn-danger" class="form-control float-right" type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+    	</div>
+    	<div class="clearfix"></div>
+  	</form>
+	</div>
+
+
+
+
+											<!-- Modal for Graduate-->
+
+<div id="id05" class="modal">
+  	<form class="modal-content animate" action="/graduate " method="post">
+    	<div class="imgcontainer">
+     	 <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close">&times;</span>
+     	 <!--<img src="logoimage.jpg" alt="Avatar" class="avatar">-->
+    	</div>
+
+    	<div class="container2">
+    		<h5 align="center">Graduation Information</h5>
+    		<h6 style="color: red; font-style: italic;">*After saving your information you can proceed to next segment!</h6>
+     	  <div class="form-row">
+		    <div class="col-md-4 mb-3">
+		      <label for="subject">Subject</label>
+		      <input type="text" class="form-control" name="subject" required>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="result_five">Result(CGPA)/Earned Credit</label>
+		      <input type="text" class="form-control" name="result_five" required>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="year_four">Passing Year</label>
+		      <select class="form-control" name="year_four" required> <option>Select One</option>
+					<option>2005</option>
+					<option>2006</option>
+					<option>2007</option>
+					<option>2008</option>
+					<option>2009</option>
+					<option>2010</option>
+					<option>2011</option>
+					<option>2012</option>
+					<option>2013</option>
+					<option>2014</option>
+					<option>2015</option>
+					<option>2016</option>
+					<option>2017</option>
+					<option>2018</option>
+					<option>2019</option>
+				</select> 
+		    </div>
+		  </div>
+
+		  <div class="form-row">
+		  <div class="col-md-6 mb-2">
+		      <label for="field">Field Of Specialization(if any)</label>
+		      <input type="text" class="form-control" name="field">
+		    </div>
+		    <div class="col-md-6 mb-2">
+		      <label for="institute_two">University/Institution</label>
+		      <input type="text" class="form-control" name="institute_two" required>
+		    </div>
+		    </div>
+
+      		<button class="btn btn-success" class="form-control float-left" type="submit" name="graduate" onclick="document.getElementById('id06').style.display='block', document.getElementById('id05').style.display='none'">Save</button>
+    	</div>
+
+    	<div class="container2">
+      		<button class="btn btn-danger" class="form-control float-right" type="button" onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">Cancel</button>
+    	</div>
+    	<div class="clearfix"></div>
+  	</form>
+	</div>
+
+
+										<!-- Modal for postGraduate-->
+
+<div id="id06" class="modal">
+  	<form class="modal-content animate" action="/postgraduate" method="post">
+    	<div class="imgcontainer">
+     	 <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close">&times;</span>
+     	 <!--<img src="logoimage.jpg" alt="Avatar" class="avatar">-->
+    	</div>
+
+    	<div class="container2">
+    		<h5 align="center">Post-Graduation Information</h5>
+    		<h6 style="color: red; font-style: italic;">*You can omit this section!</h6>
+     	  <div class="form-row">
+		    <div class="col-md-4 mb-3">
+		      <label for="subject_two">Subject</label>
+		      <input type="text" class="form-control" name="subject_two" required>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="result_six">Result(CGPA)/Earned Credit</label>
+		      <input type="text" class="form-control" name="result_six" required>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="year_five">Passing Year</label>
+		      <select class="form-control" name="year_five" required> <option>Select One</option>
+					<option>2005</option>
+					<option>2006</option>
+					<option>2007</option>
+					<option>2008</option>
+					<option>2009</option>
+					<option>2010</option>
+					<option>2011</option>
+					<option>2012</option>
+					<option>2013</option>
+					<option>2014</option>
+					<option>2015</option>
+					<option>2016</option>
+					<option>2017</option>
+					<option>2018</option>
+					<option>2019</option>
+				</select> 
+		    </div>
+		  </div>
+
+		  <div class="form-row">
+		  <div class="col-md-6 mb-2">
+		      <label for="field_two">Field Of Specialization</label>
+		      <input type="text" class="form-control" name="field_two" required>
+		    </div>
+		    <div class="col-md-6 mb-2">
+		      <label for="institute_three">University/Institution</label>
+		      <input type="text" class="form-control" name="institute_three" required>
+		    </div>
+		    </div>
+
+      		<button class="btn btn-success" class="form-control float-left" type="submit" name="postgraduate" onclick="document.getElementById('id07').style.display='block', document.getElementById('id06').style.display='none'">Save</button>
+    	</div>
+
+    	<div class="container2">
+      		<button class="btn btn-danger" class="form-control float-right" type="button" onclick="document.getElementById('id07').style.display='block', document.getElementById('id06').style.display='none'" class="cancelbtn">Skip</button>
+    	</div>
+    	<div class="clearfix"></div>
+  	</form>
+	</div>
+
+
+
+
+      								<!-- Modal for Ph.D-->
+
+<div id="id07" class="modal">
+  	<form class="modal-content animate" action="/phd" method="post">
+    	<div class="imgcontainer">
+     	 <span onclick="document.getElementById('id07').style.display='none'" class="close" title="Close">&times;</span>
+     	 <!--<img src="logoimage.jpg" alt="Avatar" class="avatar">-->
+    	</div>
+
+    	<div class="container2">
+    		<h5 align="center">Ph.D. Program Information</h5>
+    		<h6 style="color: red; font-style: italic;">*You can omit this section</h6>
+     	  <div class="form-row">
+		    <div class="col-md-4 mb-3">
+		      <label for="subject_three">Subject</label>
+		      <input type="text" class="form-control" name="subject_three" required>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="research">Research Field</label>
+		      <input type="text" class="form-control" name="research" required>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="institute_four">University/Institution</label>
+		      <input type="text" class="form-control" name="institute_four" required>
+		    </div>
+		    </div>
+		  
+		  <div class="form-row">
+		  <div class="col-md-6 mb-2">
+		      <label for="description_two">About Research Paper</label>
+      			<textarea class="form-control" class="form" name="description_two" rows="4" required></textarea>
+		    </div>
+		    <div class="col-md-6 mb-2">
+		      <label for="sup">About Your respective Superviser / Demonstrator</label>
+      			<textarea class="form-control" class="form" name="sup" rows="4" required></textarea>
+		    </div>
+		    </div>
+		    <div class="form-row">
+		    <div class="col-md-6 mb-2">
+		    <label for="journal">Publication(Journal)</label>
+		      <input type="text" class="form-control" name="journal" required>
+			</div>
+			<div class="col-md-6 mb-2">
+		    <label for="p_year">Publication Year</label>
+		      <input type="text" class="form-control" name="p_year" required>
+			</div>
+			</div>
+			
+      		<button class="btn btn-success" class="form-control float-left" type="submit" class="submitbtn" name="phd" onclick="document.getElementById('id08').style.display='block', document.getElementById('id07').style.display='none'">Save</button>
+    		
+      		<button class="btn btn-danger" class="form-control float-right" type="button" onclick="document.getElementById('id08').style.display='block', document.getElementById('id07').style.display='none'" class="cancelbtn">Skip</button>
+    	
+  	</form>
+	</div>
+
+</div>
+
+
+													<!-- OthersHigherStudy--> 
+
+	<div id="id08" class="modal">
+  		<form class="modal-content animate" action="/Ohigher" method="post">
+	    	<div class="imgcontainer">
+	     	 <span onclick="document.getElementById('id08').style.display='none'" class="close" title="Close">&times;</span>
+	     	 <!--<img src="logoimage.jpg" alt="Avatar" class="avatar">-->
+	    	</div>
+
+	    	<div class="container2">
+	    		<h5 align="center">Helpful Degree/Recognitions</h5>
+	    		<h6 style="color: red; font-style: italic;">*You can simply omit this section</h6>
+	     	  <div class="form-row">
+			    <div class="col-md-6 mb-2">
+			      <label for="f_name">Field Name(if any)</label>
+			      <input type="text" class="form-control" name="f_name">
+			    </div>
+			    <div class="col-md-6 mb-2">
+			      <label for="degree">Degree(if any)</label>
+	      			<textarea class="form-control" class="form" name="degree" rows="4" ></textarea>
+			    </div>
+			    </div>
+			  
+			  <div class="form-row">
+			  <div class="col-md-6 mb-2">
+			      <label for="rec_two">Recognition(if any)</label>
+	      			<textarea class="form-control" class="form" name="rec_two" rows="4" ></textarea>
+			    </div>
+			    <div class="col-md-6 mb-2">
+			      <label for="institute_five">Institution(if any)</label>
+	      			<textarea class="form-control" class="form" name="institute_five" rows="4" ></textarea>
+			    </div>
+			    </div>
+
+
+			    
+	      		<button class="btn btn-success" class="form-control float-left" type="submit" class="submitbtn" name="Ohigher" onclick="document.getElementById('id08').style.display='none'">Submit</button>
+	    		
+	      		<button class="btn btn-danger" class="form-control float-right" type="button" onclick="document.getElementById('id08').style.display='none'" class="cancelbtn">Cancel</button>
+	    		
+	  	</form>
+	</div>
+
+</div>
+
+
+
+
+												<!-- Modal for additionalQualificaton-->
+
+<div id="id09" class="modal">
+  	<form class="modal-content animate" action="/additional" method="post">
+    	<div class="imgcontainer">
+     	 <span onclick="document.getElementById('id09').style.display='none'" class="close" title="Close">&times;</span>
+     	 <!--<img src="logoimage.jpg" alt="Avatar" class="avatar">-->
+    	</div>
+
+    	<div class="container2">
+    		<h5 align="center">Additional Information</h5>
+    		<h6 style="color: red; font-style: italic;">*Not necessary!You can simply omit this section</h6>
+     	  	<div class="form-group">
+     	  		<label for="add">Enlist the recognitions or auxiliary educational background(if any)</label>
+      			<textarea class="form-control" class="form" name="add" rows="8" ></textarea>
+     	  	</div>
+			
+      		<button class="btn btn-success" class="form-control float-left" type="submit" class="submitbtn" name="additional">Submit</button>
+    		
+      		<button class="btn btn-danger" class="form-control float-right" type="button" onclick="document.getElementById('id09').style.display='none'" class="cancelbtn">Cancel</button>
+    		</div>
+  	</form>
+	
+</div>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.has_sub').click(function(){
+			$(this).toggleClass('tap');
+
+		});
+	});
+</script>
+
+
+</body>
+</html>

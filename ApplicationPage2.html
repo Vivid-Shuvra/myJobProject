@@ -1,0 +1,170 @@
+<!doctype html>
+
+<html>
+
+<head>
+<title> RUET: Job Portal/User/Application</title>
+<link type = "text/css" rel = "stylesheet" href = "stylesheetAppPage2.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="bg-light">
+<div id= "header">
+	<img src = "logoimage.jpg" alt="">
+	<h6> Heaven's Light Is Our Guide </h6>
+	<h1> Rajshahi University Of Engineering & Technology </h1>
+	<h3> রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয় </h3>
+</div>
+<div id= "navbar">
+<ul> 
+	<li> <a href = ""> Home </a> </li>
+	<li> <a href = ""> Manage Jobs </a> </li>
+	<li> <a href = ""> Board Authority </a> </li>
+	<li> <a href = ""> Career Learning </a> </li>
+</ul>
+</div>
+
+<div id="header_form"><h1 align="center">Application Form</h1></div>
+	
+<div class="container">
+
+	<form class="needs-validation" novalidate method="post" action="/submit">
+		<div class="form-group">
+      <label for="serial">Applicant Id</label>
+      <input type="text" class="form-control" name="serial" id="serial" placeholder="Applicant Id" MAXLENGTH=16 SIZE=16>
+      <h6 style="color: red; font-style: italic; font-size: 80%;">*Please Remember Your Id To View Application</h6>
+  	</div>
+	<!--<div class="form-row">
+		<div class="col-md-4 mb-2" >
+      	<h6 style="color:red; font-size:80%; font-style: italic;">*Get your id here</h6>
+      </div>
+  	<div class="col-md-8 mb-2">
+      <button type="button" class="btn btn-warning" class="form-control" id="btnPress">Press</button>
+  	</div>
+		
+	</div>-->
+  	<div class="form-group">
+		<label for="job">Applying For The Post*</label>
+		<input class="form-control" type="text" name="job" placeholder="Post Name" required>
+		<div class="invalid-feedback">
+        Please fill up the field!
+      </div> 
+	</div>
+
+	<div class="form-group">
+		<label for="dept">For Which Section?*</label>
+		<select class="form-control" name="dept" required>
+			<option>Administrative</option>
+			<option>Medical center</option>
+			<option>Library</option>
+			<option>Computer center</option>
+			<option>Hall & Dormitory</option>
+			<option>Bank</option>
+			<option>Department of EEE</option>
+			<option>Department of CSE</option>
+			<option>Department of ETE</option>
+			<option>Department of ECE</option>
+			<option>Department of CE</option>
+			<option>Department of ME</option>
+			<option>Department of GCE</option>
+			<option>Department of CFPE</option>
+			<option>Department of MTE</option>
+			<option>Department of IPE</option>
+			<option>Department of MSE</option>
+			<option>Department of BECM</option>
+			<option>Department of URP</option>
+			<option>Department of ARCHITECTURE</option>
+			<option>Cafeteria</option>
+		</select>
+		<div class="valid-feedback">
+        Looks good!
+      </div>
+      <br>
+
+      <div id="noteHead">
+      	<h6>*Please Fill up the field & face the checkbox</h6>
+      </div>
+      <div class="form-check">
+		<label class="form-check-label">
+			<input class="form-check-input" type="checkbox" id="term"> Ready to apply?
+		</label>
+	</div>
+      <button class="btn btn-primary" class="form-control" type="submit" name="submit" id ="btnProceed" >Proceed</button>
+
+	</div>
+
+</form>
+<br>
+<br>
+<div class="pagination">
+      <center>
+      	<a href="/user" class="prev">&laquo; Previous </a>
+      	<a href="/personal" class="nxt">Next &raquo;</a>
+      </center>
+  	</div>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+  		
+  	
+      }, false);
+    });
+
+  }, false);
+
+})();
+		
+</script>
+
+<script type="text/javascript">
+		$(function(){
+			var button = $('#btnProceed');
+			button.attr('disabled', 'disabled');
+		$('#term').change(function(e){
+				if(this.checked){
+					alert("Are you sure?");
+					button.removeAttr('disabled');
+				}else{
+					button.attr('disabled', 'disabled');
+				}
+			});
+
+		});
+	</script>
+
+<script type="text/javascript">
+
+   function rand(len){
+  return Math.floor(Math.random() * Math.pow(10, len));
+}
+   document.getElementById('serial').value = rand(9);
+
+</script>
+
+<div id="footer">
+	Copyrights RUET 2019. All rights reserved </br>
+	Application developed by:Web Designer,RUET
+</div>
+</div>
+
+</body>
+</html>
+
+
+

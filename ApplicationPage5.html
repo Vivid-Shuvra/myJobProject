@@ -1,0 +1,303 @@
+<!doctype html>
+
+<html>
+
+<head>
+<title> RUET: Job Portal/User/Application</title>
+<link type = "text/css" rel = "stylesheet" href = "stylesheetAppPage2.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body class="bg-light">
+<div id= "header">
+	<img src = "logoimage.jpg" alt="">
+	<h6> Heaven's Light Is Our Guide </h6>
+	<h1> Rajshahi University Of Engineering & Technology </h1>
+	<h3> রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয় </h3>
+</div>
+<div id= "navbar">
+<ul> 
+	<li> <a href = ""> Home </a> </li>
+	<li> <a href = ""> Manage Jobs </a> </li>
+	<li> <a href = ""> Board Authority </a> </li>
+	<li> <a href = ""> Career Learning </a> </li>
+</ul>
+</div>
+
+<div id="header_form"><h1 align="center">Application Form</h1></div>
+	
+<div class="container">
+<form class="needs-validation" novalidate action="/secondary " method="post" enctype="multipart/form-data" >
+<h3 class="info_header bg-success" align="center">Secondary Informations</h3>
+	<br>
+	<div class="form-group">
+		<label for="skill">Skills & Co-Curricular Activities</label>
+		<textarea class="form-control bg-light" class="form" name="skill" rows="8"></textarea>
+	</div>
+
+	<div class="form-group">
+		<label for="cases">Do you have any legally divisional litigation?</label>
+		<div class="form-check">
+				<label class="form-check-label">
+				<input class="form-check-input" type="checkbox" id="chk_one"> Yes, I have litigation(Add details)
+				</label>
+				<br>
+				<label class="form-check-label">
+				<input class="form-check-input" type="checkbox" id="chk_two"> No, I have no litigation 
+				</label>
+			</div>
+		<textarea class="form-control" class="form" id="cases" name="cases" rows="7"></textarea>
+	</div>
+
+
+<script type="text/javascript">
+			$(function(){
+				var section_one = $('#cases');
+				section_one.attr('hidden', 'hidden');
+			$('#chk_one').change(function(e){
+					if(this.checked){
+						section_one.removeAttr('hidden');
+					}else{
+						section_one.attr('hidden', 'hidden');
+					}
+				});
+
+			});
+		</script>
+
+	<div  class="form-group">
+	<label for="exp">Previous Experiences</label>
+	<div>
+	<table id="myTable" class="table table-bordered table-sm table-warning">
+		<thead class="table-primary">
+			<tr>
+				<th></th>
+				<th>Post Name</th>
+				<th>Institution Name</th>
+				<th>Salary Scale & Grade</th>
+				<th>Job Duration</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="table-warning">
+				<td><input type="checkbox" name="chk"/></td>
+				<td><input type="text" class="form-control" name="p_name" /></td>
+				<td><input type="text" class="form-control" name="i_name"/></td>
+				<td><input type="text" class="form-control" name="s_scale"/></td>
+				<td><input type="text" class="form-control" name="j_limit"/></td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<div>
+	<h6 style="color: red; font-style: italic;">*For deleting a row face the checkbox</h6>
+	<input type="button" value="Add Row" onclick="addRow()" style="background-color: rgb(141,141,141); padding: 5px;
+	" />
+	<input type="button" value="Delete Row" onclick="deleteRow()" style="background-color: rgb(255,26,26); padding: 5px;"/>
+	</div>
+	</div>
+	<br>
+	<br>
+	<div class="form-group"> 
+		<label for="realFile">Upload CV/Resume</label>
+		<input type="file" name="resume" id="realFile" hidden="hidden">
+		<button class="btn btn-secondary mt-2" class="form-control" type="button" id="custom-button">Choose File</button>
+		<span id="custom-text">No file chosen yet</span>
+		<script type="text/javascript">
+			const realFileBtn = document.getElementById("realFile");
+			const customBtn = document.getElementById("custom-button");
+			const customTxt = document.getElementById("custom-text");
+
+			customBtn.addEventListener("click", function() {
+
+				realFileBtn.click();
+			});
+
+			realFileBtn.addEventListener("change", function() {
+
+				if(realFileBtn.value){
+					customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+				}
+				else{
+					customTxt.innerHTML = "No file chosen yet";
+				}
+			});
+		</script>
+	</div>
+	
+	<div class="form-group"> 
+		<label for="realFile2">Upload Passport-sized Photo</label>
+		<input type="file" name="image" id="realFile2" hidden="hidden">
+		<button class="btn btn-secondary mt-2" class="form-control" type="button" id="custom-button2">Choose File</button>
+		<span id="custom-text2">No file chosen yet</span>
+		<script type="text/javascript">
+			const realFileBtn2 = document.getElementById("realFile2");
+			const customBtn2 = document.getElementById("custom-button2");
+			const customTxt2 = document.getElementById("custom-text2");
+
+			customBtn2.addEventListener("click", function() {
+
+				realFileBtn2.click();
+			});
+
+			realFileBtn2.addEventListener("change", function() {
+
+				if(realFileBtn2.value){
+					customTxt2.innerHTML = realFileBtn2.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+				}
+				else{
+					customTxt2.innerHTML = "No file chosen yet";
+				}
+			});
+		</script>
+	</div>
+
+	<div class="form-group"> 
+		<label for="realFile3">Upload Your Signature</label>
+		<input type="file" name="signature" id="realFile3" hidden="hidden">
+		<button class="btn btn-secondary mt-2" class="form-control" type="button" id="custom-button3">Choose File</button>
+		<span id="custom-text3">No file chosen yet</span>
+		<script type="text/javascript">
+			const realFileBtn3 = document.getElementById("realFile3");
+			const customBtn3= document.getElementById("custom-button3");
+			const customTxt3 = document.getElementById("custom-text3");
+
+			customBtn3.addEventListener("click", function() {
+
+				realFileBtn3.click();
+			});
+
+			realFileBtn3.addEventListener("change", function() {
+
+				if(realFileBtn3.value){
+					customTxt3.innerHTML = realFileBtn3.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+				}
+				else{
+					customTxt3.innerHTML = "No file chosen yet";
+				}
+			});
+		</script>
+	</div>
+
+	<br>
+	<div class="form-check">
+		<label class="form-check-label">
+			<input class="form-check-input" type="checkbox" id="term"> Agree with all the terms and conditions
+		</label>
+	</div>
+	<br>
+	<button class="btn btn-success" class="form-control" type="submit" name="secondary" id="btnProceed" onclick="">Save</button>
+
+	
+</form>
+<div class="pagination">
+      <center>
+      	<a href="/educational" class="prev">&laquo; Previous</a>
+      	<a href="/bank" class="nxt">Next &raquo;</a>
+      </center>
+  	</div>
+<div id="footer">
+	Copyrights RUET 2019. All rights reserved </br>
+	Application developed by:Web Designer,RUET
+</div>
+</div>
+
+
+<script type="text/javascript">
+	
+function addRow() {
+
+			/*var table = document.getElementById('myTable');
+
+			var rowCount = table.rows.length;
+			var row = table.insertRow(rowCount);
+
+			var colCount = table.rows[1].cells.length;
+
+			for(var i=0; i<colCount; i++) {
+
+				var newcell	= row.insertCell(i);
+
+				newcell.innerHTML = table.rows[1].cells[i].innerHTML;
+				switch(newcell.childNodes[0].type) {
+					case "text":
+							newcell.childNodes[0].value = "AB";
+							newcell.childNodes[0].name += rowCount;
+							break;
+					case "checkbox":
+							newcell.childNodes[0].checked = false;
+							newcell.childNodes[0].name+= rowCount;
+							break;
+				}
+			}*/
+			var table = document.getElementById('myTable');
+			  var new_row = table.rows[1].cloneNode(true);
+			  var len = table.rows.length;
+
+			  var inp = new_row.cells[0].getElementsByTagName('input')[0];
+			  inp.name += len;
+			  inp.checked = false;
+			  var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
+			  inp1.name += len;
+			  inp1.value = '';
+			  var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
+			  inp2.name += len;
+			  inp2.value = '';
+			  var inp3 = new_row.cells[3].getElementsByTagName('input')[0];
+			  inp3.name += len;
+			  inp3.value = '';
+			  var inp4 = new_row.cells[4].getElementsByTagName('input')[0];
+			  inp4.name += len;
+			  inp4.value = '';
+			  table.appendChild(new_row);
+		}
+
+		function deleteRow() {
+			try {
+			var table = document.getElementById('myTable');
+			var rowCount = table.rows.length;
+
+			for(var i=0; i<rowCount; i++) {
+				var row = table.rows[i];
+				var chkbox = row.cells[0].childNodes[0];
+				if(null != chkbox && true == chkbox.checked) {
+					if(rowCount <= 2) {
+						alert("Cannot delete all the rows.");
+						break;
+					}
+					table.deleteRow(i);
+					rowCount--;
+					i--;
+				}
+
+
+			}
+			}catch(e) {
+				alert(e);
+			}
+		}
+
+</script>
+
+<script type="text/javascript">
+		$(function(){
+			var button = $('#btnProceed');
+			button.attr('disabled', 'disabled');
+		$('#term').change(function(e){
+				if(this.checked){
+					alert("Are you sure to apply finally?");
+					button.removeAttr('disabled');
+				}else{
+					button.attr('disabled', 'disabled');
+				}
+			});
+
+		});
+	</script>
+
+
+</body>
+</html>

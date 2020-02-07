@@ -1,0 +1,245 @@
+<!doctype html>
+
+<html>
+
+<head>
+<title> RUET: Job Portal/User/Application</title>
+<link type = "text/css" rel = "stylesheet" href = "stylesheetAppPage2.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body class="bg-light">
+<div id= "header">
+	<img src = "logoimage.jpg" alt="">
+	<h6> Heaven's Light Is Our Guide </h6>
+	<h1> Rajshahi University Of Engineering & Technology </h1>
+	<h3> রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয় </h3>
+</div>
+<div id= "navbar">
+<ul> 
+	<li> <a href = ""> Home </a> </li>
+	<li> <a href = ""> Manage Jobs </a> </li>
+	<li> <a href = ""> Board Authority </a> </li>
+	<li> <a href = ""> Career Learning </a> </li>
+</ul>
+</div>
+
+<div id="header_form"><h1 align="center">Application Form</h1></div>
+	
+<div class="container">
+<form class="needs-validation" novalidate method="post" action="/save">
+<h3 class="info_header bg-success" align="center">Personal Information</h3>
+
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="name">Applicant's Name</label>
+      <input type="text" class="form-control" name="name" placeholder="Applicant's Name"  required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="father">Father/Husband's Name</label>
+      <input type="text" class="form-control" name="father" placeholder="Father/Husband's Name"  required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="mother">Mother's Name</label>
+      <input type="text" class="form-control" name="mother" placeholder="Mother's Name" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="dateOfBirth">Date Of Birth</label>
+      <input class="form-control" type="date" name="dateOfBirth" required>
+      <div class="invalid-feedback">
+        Please provide a valid DOB.
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="gender">Gender</label>
+      <select class="form-control" name="gender" required> <option>Male</option>
+		   <option>Female</option>
+		</select>
+      <div class="invalid-feedback">
+        Please provide a valid Gender.
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="nationality">Nationality</label>
+      <select class="form-control" name="nationality" required> <option>Bangladeshi</option>
+	</select>
+      <div class="valid-feedback">
+        Looks good!.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="email">E-mail</label> 
+      <input type="text" class="form-control" name="email" placeholder="xyz@gmail.com" required>
+      <div class="valid-feedback">
+        Looks good!.
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="contact">Contact No</label>
+      <input type="text" class="form-control" name="contact" placeholder="017*******1" required>
+      <div class="valid-feedback">
+        Looks good!.
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="religion">Religion</label>
+      <select class="form-control" name="religion" required> <option>Select One</option>
+			<option>Islam</option>
+			<option>Hinduism</option>
+			<option>Christianits</option>
+			<option>Buddhism</option>
+			<option>Others</option>
+	</select>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="blood">Blood-Group</label>
+      <select class="form-control" name="blood" required> <option>Select One</option>
+			<option>O(+ve)</option>
+			<option>O(-ve)</option>
+			<option>A(+ve)</option>
+			<option>A(-ve)</option>
+			<option>B(+ve)</option>
+			<option>B(-ve)</option>
+			<option>AB(+ve)</option>
+			<option>AB(-ve)</option>
+			<option>Bombay group</option>
+			<option>Others</option>
+	</select> 
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label>Tribal</label>
+      <div class="form-control ">
+			<label class="radio-inline">
+				<input type="radio" name="option" value="Yes">
+			Yes</label>
+			<label class="radio-inline">
+				<input type="radio" name="option" value="No">
+			No</label>
+		</div>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label>Marrital Status</label>
+      <div class="form-control ">
+			<label class="radio-inline">
+				<input type="radio" name="option2" value="Married">
+			Married</label>
+			<label class="radio-inline">
+				<input type="radio" name="option2" value="Single">
+			Single</label>
+		</div>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-8 mb-2">
+      <label for="national">National ID</label>
+      <input type="text" class="form-control" name="national" placeholder="National ID" required>
+      <div class="invalid-feedback">
+        Please provide a valid National ID.
+      </div>
+    </div>
+    <div class="col-md-4 mb-2">
+      <label for="district">District (Own)</label>
+      <input type="text" class="form-control" name="district" placeholder="Your District" required>
+      <div class="invalid-feedback">
+        Please provide a valid District name.
+      </div>
+    </div>
+  </div>
+
+ <div class="form-row">
+    <div class="col-md-6 mb-2">
+      <label for="present">Present Address</label>
+      <textarea class="form-control" class="form" name="status" rows="4" required></textarea>
+      <div class="invalid-feedback">
+        Please provide a valid Address.
+      </div>
+    </div>
+    <div class="col-md-6 mb-2">
+      <label for="permanent">Permanent Address</label>
+      <textarea class="form-control" class="form" name="status2" rows="4" required></textarea>
+      <div class="invalid-feedback">
+        Please provide a valid Address.
+      </div>
+    </div>
+  </div>
+
+<div id="noteHead">
+      	<h6>*Please Fill up the field</h6>
+      </div>
+      <button class="btn btn-success" class="form-control" type="submit" name="save" id="btnProceed" onclick="">Save</button>
+      <!--<div id="infoHead">
+      <h6>Information Saved</h6>
+      </div>-->
+</form>
+
+<div class="pagination">
+      <center>
+      	<a href="/application" class="prev">&laquo; Previous</a>
+      	<a href="/educational" class="nxt">Next &raquo;</a>
+      </center>
+  	</div>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+<div id="footer">
+	Copyrights RUET 2019. All rights reserved </br>
+	Application developed by:Web Designer,RUET
+</div>
+</div>
+
+</body>
+</html>
+
